@@ -18,12 +18,12 @@ int main()
 
 label:
 
-    std::cout << "Hvor mange KM vil kunden k\x9Bres? ";
-    std::cin >> indtastetKM;
+    cout << "Hvor mange KM vil kunden k\x9Bres? ";
+    cin >> indtastetKM;
 
     string Opkast;
-    std::cout << "Har kunden kastet op ? \n 1) ja \n 2) nej\n";
-    std::cin >> Opkast;
+    cout << "Har kunden kastet op ? \n 1) ja \n 2) nej\n";
+    cin >> Opkast;
 
     if (Opkast == "1" || Opkast == "ja") {
         kastetop = 1;
@@ -38,11 +38,11 @@ label:
         Resultat = udregnetPrisForKørteKMFoerGebyr + opstart;
         if (kastetop == 1) {
             visResultat = Resultat + opkastgebyr;
-            std::cout << visResultat << ",- Kr\n";
+            cout << visResultat << ",- Kr\n";
             goto label;
         }
         else if (kastetop == 0) {
-            std::cout << Resultat << ",-Kr\n";
+            cout << Resultat << ",-Kr\n";
             goto label;
         }
     }
@@ -59,11 +59,11 @@ label:
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
-            std::cout << Resultat << ",- Kr\n";
+            cout << Resultat << ",- Kr\n";
             goto label;
         }
         else if (kastetop == 0) {
-            std::cout << visResultat << ",-Kr\n";
+            cout << visResultat << ",-Kr\n";
             goto label;
         }
 
@@ -80,11 +80,11 @@ label:
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
-            std::cout << Resultat << ",- Kr\n";
+            cout << Resultat << ",- Kr\n";
             goto label;
         }
         else if (kastetop == 0) {
-            std::cout << visResultat << ",-Kr\n";
+            cout << visResultat << ",-Kr\n";
             goto label;
         }
 
@@ -103,11 +103,11 @@ label:
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
-            std::cout << Resultat << ",- Kr\n";
+            cout << Resultat << ",- Kr\n";
             goto label;
         }
         else if (kastetop == 0) {
-            std::cout << visResultat << ",-Kr\n";
+            cout << visResultat << ",-Kr\n";
             goto label;
         }
 
