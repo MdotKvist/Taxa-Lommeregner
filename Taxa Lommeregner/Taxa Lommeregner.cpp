@@ -9,7 +9,7 @@ int main()
     double opkastgebyr = 1500;
     double kundenHarKastetOp;
     double prisprkm = 2;
-    double udregnetPrisForKørteKMFoerGebyr;
+    double udregnetPrisForKï¿½rteKMFoerGebyr;
     double sumindenrabat;
     double kastetop;
     double Resultat;
@@ -18,29 +18,45 @@ int main()
 
 label:
 
+    // indsÃ¦t hvor mange km kunden vil kÃ¸res
+
     cout << "Hvor mange KM vil kunden k\x9Bres? ";
     cin >> indtastetKM;
+
+    // har kunden kastet op? ja eller nej 
 
     string Opkast;
     cout << "Har kunden kastet op ? \n 1) ja \n 2) nej\n";
     cin >> Opkast;
 
+    //hvis ja(1) sÃ¦t variablens Kastetop til en vÃ¦rdi af 1
+
     if (Opkast == "1" || Opkast == "ja") {
         kastetop = 1;
     }
+
+    // ellers hvis nej (2) sÃ¦t variablen Kastetop til 0
+
     else if (Opkast == "2" || Opkast == "nej") {
         kastetop = 0;
     }
 
+    // hvis indtastetKM er under 100 skal der ganges pris pr km med indtastet km og plusses opstarts pris
 
     if (indtastetKM <= 100) {
-        udregnetPrisForKørteKMFoerGebyr = prisprkm * indtastetKM;
-        Resultat = udregnetPrisForKørteKMFoerGebyr + opstart;
+        udregnetPrisForKï¿½rteKMFoerGebyr = prisprkm * indtastetKM;
+        Resultat = udregnetPrisForKï¿½rteKMFoerGebyr + opstart;
+
+        // hvis kastet op lÃ¦gges der opkastgebyr oven i
+
         if (kastetop == 1) {
             visResultat = Resultat + opkastgebyr;
             cout << visResultat << ",- Kr\n";
             goto label;
         }
+
+        // ellers bare vis resultat uden opkast gebyr
+
         else if (kastetop == 0) {
             cout << Resultat << ",-Kr\n";
             goto label;
@@ -48,14 +64,14 @@ label:
     }
 
     if (indtastetKM > 100) {
-        //Renger indtastet km om til prisen på kørte kilometer
+        //Renger indtastet km om til prisen pï¿½ kï¿½rte kilometer
         sumindenrabat = prisprkm * indtastetKM;
         //regner rabatten ud
         Rabatten = sumindenrabat * 10 / 100;
-        //trækker rabatten fra beregnet pris
-        udregnetPrisForKørteKMFoerGebyr = sumindenrabat - Rabatten;
+        //trï¿½kker rabatten fra beregnet pris
+        udregnetPrisForKï¿½rteKMFoerGebyr = sumindenrabat - Rabatten;
         // ligger opstart gebyr til prisen
-        visResultat = udregnetPrisForKørteKMFoerGebyr + opstart;
+        visResultat = udregnetPrisForKï¿½rteKMFoerGebyr + opstart;
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
@@ -69,14 +85,14 @@ label:
 
     }
     if (indtastetKM > 150) {
-        //Renger indtastet km om til prisen på kørte kilometer
+        //Renger indtastet km om til prisen pï¿½ kï¿½rte kilometer
         sumindenrabat = prisprkm * indtastetKM;
         //regner rabatten ud
         Rabatten = sumindenrabat * 20 / 100;
-        //trækker rabatten fra beregnet pris
-        udregnetPrisForKørteKMFoerGebyr = sumindenrabat - Rabatten;
+        //trï¿½kker rabatten fra beregnet pris
+        udregnetPrisForKï¿½rteKMFoerGebyr = sumindenrabat - Rabatten;
         // ligger opstart gebyr til prisen
-        visResultat = udregnetPrisForKørteKMFoerGebyr + opstart;
+        visResultat = udregnetPrisForKï¿½rteKMFoerGebyr + opstart;
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
@@ -92,14 +108,14 @@ label:
 
 
     if (indtastetKM > 200) {
-        //Renger indtastet km om til prisen på kørte kilometer
+        //Renger indtastet km om til prisen pï¿½ kï¿½rte kilometer
         sumindenrabat = prisprkm * indtastetKM;
         //regner rabatten ud
         Rabatten = sumindenrabat * 30 / 100;
-        //trækker rabatten fra beregnet pris
-        udregnetPrisForKørteKMFoerGebyr = sumindenrabat - Rabatten;
+        //trï¿½kker rabatten fra beregnet pris
+        udregnetPrisForKï¿½rteKMFoerGebyr = sumindenrabat - Rabatten;
         // ligger opstart gebyr til prisen
-        visResultat = udregnetPrisForKørteKMFoerGebyr + opstart;
+        visResultat = udregnetPrisForKï¿½rteKMFoerGebyr + opstart;
 
         if (kastetop == 1) {
             Resultat = visResultat + opkastgebyr;
